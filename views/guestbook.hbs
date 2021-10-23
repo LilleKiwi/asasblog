@@ -1,0 +1,36 @@
+{{> errors}}
+<h1 class="pageTitle">guestbook</h1>
+
+{{#if session.isLoggedIn}}
+{{else}}
+	<div class="centerText">
+		<a href="/guestbook/createGuestbookPost"
+		class="btn btn-primary">Create new post</a>
+	</div>
+{{/if}}
+
+{{#if hasDatabaseError}}
+	<p>Couldn't fetch the posts at the moment, try again later.</p>
+{{else}}
+	<div class="centerText">
+	{{#if guestbook.length}}
+		
+		{{#each guestbook}}
+			<article class="centerText spaceBottom">
+				<div class="form-layout posts-border">
+					<div class="textSize">Post by: </div><div class="textSize1"> <h2 class="postTitle">{{name}}</h2></div>
+					<p>{{post}}</p>
+					<p class="textSize">Posted on: {{date}}</p>
+				</div>
+                {{#if ../session.isLoggedIn}}
+					<a href="/guestbook/{{id}}/update" class="spaceBetween">Update</a>
+					<a href="/guestbook/{{id}}/delete" class="spaceBetween">Delete</a>
+				{{/if}} 
+            </article>
+		{{/each}}
+		
+	{{else}}
+		<p>Please leave a comment!</p>
+	{{/if}}
+	</div>
+{{/if}}

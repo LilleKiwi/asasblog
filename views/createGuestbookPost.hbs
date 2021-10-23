@@ -1,0 +1,13 @@
+{{> errors}}
+<form action="/guestbook/createGuestbookPost" method="POST" class="form-layout">
+    <h1 class="titleStart postTitle">Create new guestbook post</h1>
+    <input type="hidden" name="_csrf" value={{csurfToken}}>
+
+    <label class="form-label" for="input-example-1">Name</label>
+    <input class="form-input formBorder" "input" type="text" name="name" value="{{name}}" id="input-example-1">
+    
+    <label class="form-label" for="input-example-3">Post</label>
+    <textarea class="form-input formBorder" "textarea" rows="12" id="input-example-3"rows="3" name="post">{{post}}</textarea>
+
+    <input type="submit" value="Create post" class="btn btn-primary buttonMarginTop">
+</form>

@@ -1,0 +1,15 @@
+{{> errors}}
+
+<form action="/faqs/{{faq.id}}/update" method="POST" class="form-layout">
+	<h1>Update FAQ</h1>
+	<input type="hidden" name="_csrf" value={{csurfToken}}>
+
+
+    <label class="form-label" for="input-example-1">Question</label>
+    <input class="form-input formBorder" "input" type="text" name="question" value="{{faq.question}}" id="input-example-1">
+
+    <label class="form-label" for="input-example-3">Answer</label>
+    <textarea class="form-input formBorder" "textarea" rows="12" id="input-example-3"rows="3" name="answer">{{faq.answer}}</textarea>
+
+    <input type="submit" value="Update FAQ" class="btn btn-primary buttonMarginTop">
+</form>

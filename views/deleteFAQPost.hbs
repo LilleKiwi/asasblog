@@ -1,0 +1,6 @@
+{{> errors}}
+<p class="form-layout">Really delete this faq: {{faq.question}}?</p>
+<form action="/faqs/{{faq.id}}/delete" method="post" class="form-layout">
+	<input type="hidden" name="_csrf" value={{csurfToken}}>
+	<input type="submit" value="Delete it!" class="btn btn-primary">
+</form>

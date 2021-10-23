@@ -1,0 +1,10 @@
+{{> errors}}
+{{#if faq}}
+	<div class="form-layout">
+		<h1>{{faq.question}}</h1>
+		<p>{{faq.answer}}</p>
+{{else}}
+		<h1 class="centerText">Not found</h1>
+		<p class="centerText">The FAQ doesn't exist.</p>
+	</div>
+{{/if}}

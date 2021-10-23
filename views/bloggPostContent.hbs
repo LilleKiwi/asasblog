@@ -1,0 +1,15 @@
+{{> errors}}
+{{#if posts}}
+	<div class="form-layout">
+		<h1>{{posts.title}}</h1>
+		<p>{{posts.post}}</p>
+		<p>Posted on: {{posts.date}}</p>
+		{{#if session.isLoggedIn}}
+			<a href="/blogg/{{posts.id}}/update">Update</a>
+			<a href="/blogg/{{posts.id}}/delete">Delete</a>
+		{{/if}}
+	{{else}}
+		<h1 class="centerText">Not found</h1>
+		<p class="centerText">The post doesn't exist.</p>
+	</div>
+{{/if}}

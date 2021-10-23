@@ -1,0 +1,14 @@
+{{> errors}}
+
+<form action="/blogg/createBloggPost" method="POST" class="form-layout">
+    <input type="hidden" name="_csrf" value={{csurfToken}}>
+    <h1 class="titleStart postTitle">Create new post</h1>
+
+    <label class="form-label" for="input-example-1">Title</label>
+    <input class="form-input formBorder" "input" type="text" name="title" value="{{title}}" id="input-example-1">
+    
+    <label class="form-label" for="input-example-3">Post</label>
+    <textarea class="form-input formBorder" "textarea" rows="12" id="input-example-3"rows="3" name="post">{{post}}</textarea>
+
+    <input type="submit" value="Create post" class="btn btn-primary buttonMarginTop">
+</form>

@@ -1,0 +1,25 @@
+{{> errors}}
+
+<h1 class="pageTitle">blog</h1>
+
+{{#if hasDatabaseError}}
+	<p>Couldn't fetch the posts at the moment, try again later.</p>
+{{else}}
+	<div class="centerText">
+	{{#if blogg.length}}	
+		{{#each blogg}}
+			<article>
+                <div class="form-layout posts-border">
+                    <h2 class="postTitle">{{title}}</h2>
+                    <p>{{post}}</p>
+					<p class="textSize">Posted on: {{date}}</p>
+			    </div>
+				<p class="centerText"><a href="/blogg/{{id}}">Read more</a></p>
+            </article>
+		{{/each}}
+		
+	{{else}}
+		<p>No posts!</p>
+	{{/if}}
+	</div>
+{{/if}}

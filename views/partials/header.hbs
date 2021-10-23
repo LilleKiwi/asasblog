@@ -1,0 +1,32 @@
+<header class="navbar menuBackgroundColor">
+    <section class="navbar-section">
+        <h1 class="title">
+                <a href="/">åsasblog</a> 
+        </h1>
+    </section>
+    <section class="navbar-section textColor">
+        <ul class="p-centered">
+            <a href="/" class="btn-link menuTextSpace">home</a>
+            <a href="/blogg" class="btn-link menuTextSpace">blog</a>
+            <a href="/guestbook" class="btn-link menuTextSpace">guestbook</a>
+            <a href="/faqs" class="btn-link menuTextSpace">faq</a> 
+            <a href="/about" class="btn-link menuTextSpace">about</a>
+            <a href="/contact" class="btn-link menuTextSpace">contact</a>     
+        </ul>
+    </section>
+    
+    {{#if session.isLoggedIn}}
+        <section class="navbar-section">
+            <a href="/blogg/createBloggPost" class="btn btn-primary buttonSpecing">Create new post</a>
+            <a href="/faqs/createFAQPost" class="btn btn-primary buttonSpecing">Create new FAQ</a>
+            <form action="/logout" method="post" class="buttonSpecing">
+                <input type="hidden" name="_csrf" value={{csurfToken}}>
+                <button type="submit"class="btn btn-primary">Log out</button>
+            </form>
+        </section>
+    {{else}}   
+        <section class="navbar-section">
+            <a href="/login" class="btn btn-primary buttonSpecing">Log in</a>
+        </section>  
+    {{/if}}
+</header>

@@ -1,0 +1,14 @@
+{{> errors}}
+
+<form action="/faqs/createFAQPost" method="POST" class="form-layout">
+    <input type="hidden" name="_csrf" value={{csurfToken}}>
+    <h1 class="titleStart postTitle">Create new FAQ</h1>
+
+    <label class="form-label" for="input-example-1">Question</label>
+    <input class="form-input formBorder" "input" type="text" name="question" value="{{question}}" id="input-example-1">
+
+    <label class="form-label" for="input-example-3">Answer</label>
+    <textarea class="form-input formBorder" "textarea" rows="12" id="input-example-3"rows="3" name="answer">{{answer}}</textarea>
+
+    <input type="submit" value="Create FAQ" class="btn btn-primary buttonMarginTop">
+</form>

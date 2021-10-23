@@ -1,0 +1,26 @@
+{{> errors}}
+<h1 class="pageTitle">faq</h1>
+{{#if hasDatabaseError}}
+	<p>Couldn't fetch the posts at the moment, try again later.</p>
+{{else}}
+	<div class="centerText">
+	{{#if faqs.length}}
+		
+		{{#each faqs}}
+			<article class="centerText spaceBottom">
+				<div class="form-layout posts-border">
+					<h2 class="postTitle">{{question}}</h2>
+					<p>{{answer}}</p>
+				</div>
+				{{#if ../session.isLoggedIn}}
+					<a href="/faqs/{{id}}/update">Update</a>
+					<a href="/faqs/{{id}}/delete">Delete</a>
+				{{/if}}
+            </article>
+		{{/each}}
+		
+	{{else}}
+		<p>No FAQ!</p>
+	{{/if}}
+	</div>
+{{/if}}

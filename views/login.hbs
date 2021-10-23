@@ -1,0 +1,18 @@
+{{> errors}}
+
+<h1 class="pageTitle">log in</h1>
+<form action="/login" method="post" class="loginForm-layout">
+    <!-- pattern validation example for Username -->
+    <label class="form-label" for="input-example-1">Username</label>
+    <input class="form-input formBorder" type="text" name="username">
+
+    <!-- pattern validation example for password (8 or more characters that are of at least one number, and one uppercase and lowercase letter) -->
+    <label class="form-label" for="input-example-1">Password</label>
+    <input class="form-input formBorder" type="password" name="password">
+
+    <input type="hidden" name="_csrf" value={{csurfToken}}>
+
+    <section>
+        <input type="submit" value="Login" class="btn btn-primary buttonMarginTop">
+    </section>
+</form>

@@ -1,0 +1,121 @@
+.title{
+    font-weight: 900;
+    font-size: 400%;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    color: black;
+    margin: auto;
+    margin-left: 5%;
+}
+
+.title a{
+    color: black;
+}
+
+.navbar-section.textColor ul a{
+    color: black;
+}
+
+.buttonSpecing{
+    margin-right: 2%;
+}
+
+.menuTextSpace{
+    font-weight: 900;
+    font-size: 200%;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    padding: .25rem .4rem;
+}
+
+.buttoncolor{
+    background-color: rgb(95,123,255,1);
+}
+
+.pageTitle{
+    font-weight: 900;
+    font-size: 400%;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    color: black;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.marginAuto{
+    margin: auto;
+}
+
+.spaceBetween{
+    margin-bottom: 5%;
+}
+
+.spaceBottom{
+    margin-bottom: 1%;
+}
+
+.postTitle{
+    font-weight: bold;
+}
+
+.menuBackgroundColor{
+    background: rgb(95,123,255,1);
+}
+
+.navbar-section{
+    border-bottom: 5px solid black;
+}
+
+.posts-border{
+    border: dotted black 4px;
+}
+
+.loginForm-layout{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    margin-left: 35%;
+    width: 30%;
+}
+
+.formBorder{
+    border: 1px solid black;
+    font-weight: 900;
+}
+
+.form-layout{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2%; 
+}
+
+.centerText{
+    text-align: center;
+}
+
+.textSize{
+    font-size: smaller;
+    display: inline-block;
+    font-style: italic;
+    margin: 0;
+}
+
+.textSize1{
+    font-size: x-large;
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.buttonMarginTop{
+    margin-top: 1%;
+}
+
+.spaceLeftRight{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.sectionWidth{
+    width: auto;
+}

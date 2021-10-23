@@ -1,0 +1,15 @@
+{{#if guestbookPost}}
+	<div class="form-layout">
+		<h1>{{guestbookPost.name}}</h1>
+		<p>{{guestbookPost.post}}</p>
+		<p>Posted on: {{guestbookPost.date}}</p>
+	{{#if session.isLoggedIn}}
+		<a href="/guestbook/{{guestbookPost.id}}/update">Update</a>
+		<a href="/guestbook/{{guestbookPost.id}}/delete">Delete</a>
+	{{/if}}
+{{else}}
+		<h1 class="centerText">Not found</h1>
+		<p class="centerText">The post doesn't exist.</p>
+	</div>
+{{/if}}
+{{> errors}}
